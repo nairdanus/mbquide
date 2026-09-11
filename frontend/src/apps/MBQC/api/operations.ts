@@ -40,6 +40,12 @@ export const createRelabelingPlanarOperation = (
   return operation;
 };
 
+export const createYZUnfusionOperation = (nodeId: number, beta: number) => ({
+  operation: "yz-unfusion",
+  node: nodeId,
+  beta,
+});
+
 export const createGetFlowOperation = () => ({
   flow: "pauli",
 });
@@ -51,6 +57,10 @@ export const createFocusFlowOperation = () => ({
 
 export const createSimplifyOperation = () => ({
   simplify: true,
+});
+
+export const createOptimizeEdgesOperation = () => ({
+  optimizeEdges: true,
 });
 
 export const createSimulateOperation = (input: string = "") => ({
